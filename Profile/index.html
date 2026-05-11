@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="rain-canvas"></canvas>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Profile</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <img src="photo/profile.jpg" alt="Profile photo" class="profile-pic">
+            <h1>Hi, I'm <span class="highlight">AetJayy</span></h1>
+            <p class="subtitle">444.</p>
+            <p class="description">Rose🌹</p>
+            <div class="personal-details">
+                <span><i class="fas fa-map-marker-alt"></i> Phnom Penh, Cambodia</span>
+                <span><i class="fas fa-graduation-cap"></i> SETEC Institute</span>
+            </div>
+            <a href="#contact" class="btn">Contact</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="social-links">
+            <a href="https://www.facebook.com/vareakvuth" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://t.me/Im_Hanxin" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.tiktok.com/@ohhmygoddbroo" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </section>
+
+    <button id="music-toggle" class="music-btn">🔇</button>
+
+    <audio id="bg-music" loop>
+        <source src="audio/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <footer>
+        <p>&copy; 2026 AetJayy. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
