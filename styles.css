@@ -246,28 +246,60 @@ h2 {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .social-links a {
     color: #94a3b8;
     font-size: 1.8rem;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 2px solid #334155;
     background: #1e293b;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover::before {
+    transform: scale(1);
 }
 
 .social-links a:hover {
-    color: #60a5fa;
-    border-color: #60a5fa;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(96, 165, 250, 0.3);
+}
+
+.social-links a[aria-label="Facebook"]:hover {
+    color: #1877f2;
+    border-color: #1877f2;
+    box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
+}
+
+.social-links a[aria-label="Telegram"]:hover {
+    color: #0088cc;
+    border-color: #0088cc;
+    box-shadow: 0 8px 25px rgba(0, 136, 204, 0.4);
+}
+
+.social-links a[aria-label="TikTok"]:hover {
+    color: #ff0050;
+    border-color: #ff0050;
+    box-shadow: 0 8px 25px rgba(255, 0, 80, 0.4);
 }
 
 .music-btn {
