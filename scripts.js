@@ -18,7 +18,6 @@ for (let i = 0; i < dropCount; i++) {
 
 function drawRain() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.strokeStyle = '#60a5fa';
 
     for (const drop of drops) {
         ctx.beginPath();
@@ -59,6 +58,20 @@ toggleBtn.addEventListener('click', () => {
         toggleBtn.textContent = '🔊';
     }
     isPlaying = !isPlaying;
+});
+
+const robot = document.getElementById('robot');
+const speech = document.getElementById('speech');
+const greetings = ['Hello!', 'Hi there!', 'Welcome!', 'Hey!', 'Hello!'];
+
+setTimeout(() => speech.classList.add('show'), 1000);
+
+robot.addEventListener('click', () => {
+    const msg = greetings[Math.floor(Math.random() * greetings.length)];
+    speech.textContent = msg;
+    speech.classList.remove('show');
+    void speech.offsetWidth;
+    speech.classList.add('show');
 });
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
