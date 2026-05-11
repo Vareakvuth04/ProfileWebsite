@@ -64,14 +64,9 @@ const robot = document.getElementById('robot');
 const speech = document.getElementById('speech');
 const greetings = ['Hello!', 'Hi there!', 'Welcome!', 'Hey!', 'Hello!'];
 
-setTimeout(() => speech.classList.add('show'), 1000);
-
 robot.addEventListener('click', () => {
     const msg = greetings[Math.floor(Math.random() * greetings.length)];
     speech.textContent = msg;
-    speech.classList.remove('show');
-    void speech.offsetWidth;
-    speech.classList.add('show');
 });
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
